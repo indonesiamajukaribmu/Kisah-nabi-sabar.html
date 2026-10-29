@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kisah Para Nabi Penuh Kesabaran — Nabi Idris, Nabi Ismail, dan Nabi Zulkifli: teladan kesabaran dan ke-salehan dari masa pra-Masehi hingga era Imam Mahdi.">
+<title>Kisah Para Nabi Penuh Kesabaran ✦ Idris · Ismail · Zulkifli</title>
+<style>
+/* ============================================================
+   KISAH PARA NABI PENUH KESABARAN — Single File HTML App
+   Desain: Gradien Ceria (ungu · teal · emas)
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --ungu: #7c3aed;
+  --ungu-tua: #4c1d95;
+  --teal: #0d9488;
+  --teal-tua: #115e59;
+  --emas: #d97706;
+  --emas-terang: #f59e0b;
+  --pink: #db2777;
+  --ink: #1e1b2e;
+  --abu: #5b5570;
+  --bg: #f7f5fb;
+  --kartu: #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+section[id], article[id] { scroll-margin-top: 82px; }
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Noto Sans', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.85;
+  overflow-x: hidden;
+}
+
+::selection { background: #c4b5fd; color: #2e1065; }
+
+/* ---------- Progress bar ---------- */
+#progressBar {
+  position: fixed; top: 0; left: 0; height: 5px; width: 0%;
+  background: linear-gradient(90deg, #8b5cf6, #14b8a6, #f59e0b, #ec4899);
+  z-index: 1000; border-radius: 0 4px 4px 0;
+  transition: width .12s linear;
+  box-shadow: 0 0 12px rgba(139,92,246,.55);
+}
+
+/* ---------- Navbar ---------- */
+nav#topNav {
+  position: fixed; top: 5px; left: 0; right: 0; z-index: 900;
+  background: rgba(255,255,255,.86);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(124,58,237,.14);
+  box-shadow: 0 4px 22px rgba(76,29,149,.08);
+}
+.nav-wrap {
+  max-width: 1120px; margin: 0 auto; padding: 9px 18px;
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.nav-logo {
+  font-weight: 800; font-size: .95rem;
+  background: linear-gradient(90deg, var(--ungu), var(--teal));
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: auto; white-space: nowrap;
+}
+.nav-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav-pills a {
+  text-decoration: none; font-size: .78rem; font-weight: 700;
+  color: var(--abu); padding: 6px 13px; border-radius: 999px;
+  background: #f1edfa; border: 1.5px solid transparent;
+  transition: all .25s ease; white-space: nowrap;
+}
+.nav-pills a:hover { background: #ede9fe; color: var(--ungu); transform: translateY(-1px); }
+.nav-pills a.aktif {
+  background: linear-gradient(90deg, var(--ungu), #a78bfa);
+  color: #fff; box-shadow: 0 4px 14px rgba(124,58,237,.35);
+}
+
+/* ---------- HERO ---------- */
+header.hero {
+  position: relative; min-height: 92vh;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 120px 22px 90px;
+  background: linear-gradient(135deg, #4c1d95 0%, #6d28d9 30%, #7c3aed 48%, #0d9488 82%, #115e59 100%);
+  background-size: 300% 300%;
+  animation: gradienBergerak 14s ease infinite;
+  overflow: hidden;
+}
+@keyframes gradienBergerak {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.hero::before, .hero::after {
+  content: ""; position: absolute; border-radius: 50%;
+  filter: blur(4px); opacity: .16; pointer-events: none;
+}
+.hero::before {
+  width: 420px; height: 420px; top: -120px; left: -110px;
+  background: radial-gradient(circle, #fbbf24, transparent 70%);
+  animation: melayang 9s ease-in-out infinite;
+}
+.hero::after {
+  width: 520px; height: 520px; bottom: -180px; right: -140px;
+  background: radial-gradient(circle, #5eead4, transparent 70%);
+  animation: melayang 11s ease-in-out infinite reverse;
+}
+@keyframes melayang {
+  0%,100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-26px) scale(1.06); }
+}
+.hero-bintang { position: absolute; inset: 0; pointer-events: none; }
+.hero-bintang span {
+  position: absolute; color: #fde68a; opacity: .7;
+  animation: kelip 3.2s ease-in-out infinite;
+}
+@keyframes kelip { 0%,100% { opacity: .25; transform: scale(.85);} 50% { opacity: .95; transform: scale(1.15);} }
+
+.hero-ikon {
+  width: 92px; height: 92px; margin-bottom: 22px;
+  background: rgba(255,255,255,.14); border: 1.5px solid rgba(253,230,138,.55);
+  border-radius: 28px; display: flex; align-items: center; justify-content: center;
+  font-size: 46px; backdrop-filter: blur(8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.28);
+  animation: ikonPulse 4s ease-in-out infinite;
+}
+@keyframes ikonPulse {
+  0%,100% { transform: rotate(-3deg) scale(1); }
+  50% { transform: rotate(3deg) scale(1.05); }
+}
+.hero-ikon svg { width: 54px; height: 54px; }
+
+.hero-titik {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+  color: #fde68a; font-size: .78rem; font-weight: 700; letter-spacing: 2.5px;
+  padding: 8px 18px; border-radius: 999px; margin-bottom: 22px;
+  text-transform: uppercase; backdrop-filter: blur(6px);
+}
+.hero h1 {
+  font-size: clamp(2rem, 5.2vw, 3.4rem); color: #fff; font-weight: 900;
+  line-height: 1.22; max-width: 840px; margin-bottom: 8px;
+  text-shadow: 0 6px 30px rgba(0,0,0,.3);
+}
+.hero h1 .emas-teks {
+  background: linear-gradient(90deg, #fde68a, #fbbf24, #fde68a);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.hero-sub {
+  color: #ede9fe; font-size: clamp(.95rem, 2vw, 1.12rem);
+  max-width: 680px; margin: 14px auto 30px; font-weight: 400;
+}
+.hero-nabi {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 36px;
+}
+.hero-nabi a {
+  text-decoration: none; padding: 13px 24px; border-radius: 18px;
+  font-weight: 800; font-size: .95rem; color: #fff;
+  display: flex; align-items: center; gap: 10px;
+  transition: all .3s ease; backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255,255,255,.35);
+}
+.hero-nabi a:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 14px 30px rgba(0,0,0,.3); }
+.hero-nabi .n-idris { background: linear-gradient(135deg, rgba(13,148,136,.85), rgba(94,234,212,.4)); }
+.hero-nabi .n-ismail { background: linear-gradient(135deg, rgba(139,92,246,.9), rgba(196,181,253,.4)); }
+.hero-nabi .n-zulkifli { background: linear-gradient(135deg, rgba(217,119,6,.88), rgba(252,211,77,.45)); }
+.hero-nabi .angka {
+  width: 26px; height: 26px; border-radius: 50%; background: rgba(255,255,255,.9);
+  color: var(--ungu-tua); font-size: .8rem; display: flex; align-items: center; justify-content: center;
+}
+.scroll-cue {
+  position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+  color: #ede9fe; font-size: .75rem; letter-spacing: 2px; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 6px; opacity: .85;
+}
+.scroll-cue .panah { animation: turun 1.6s ease-in-out infinite; font-size: 1.15rem; }
+@keyframes turun { 0%,100% { transform: translateY(0);} 50% { transform: translateY(8px);} }
+</style>
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav id="topNav" aria-label="Navigasi utama">
+  <div class="nav-wrap">
+    <div class="nav-logo">✦ Kisah Nabi Penuh Sabar</div>
+    <div class="nav-pills">
+      <a href="#beranda" class="aktif">Beranda</a>
+      <a href="#timeline">Garis Waktu</a>
+      <a href="#nabi-idris">Nabi Idris</a>
+      <a href="#nabi-ismail">Nabi Ismail</a>
+      <a href="#nabi-zulkifli">Nabi Zulkifli</a>
+      <a href="#jahiliah">Zaman Jahiliah</a>
+      <a href="#imam-mahdi">Era Mahdi</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="beranda">
+  <div class="hero-bintang">
+    <span style="top:14%; left:12%;">✦</span>
+    <span style="top:22%; left:78%; animation-delay:.6s;">✧</span>
+    <span style="top:64%; left:8%; animation-delay:1.1s;">✧</span>
+    <span style="top:12%; right:22%; animation-delay:1.6s;">✦</span>
+    <span style="top:74%; right:14%; animation-delay:2.1s;">✦</span>
+    <span style="top:38%; left:4%; animation-delay:2.6s;">✧</span>
+  </div>
+  <div class="hero-ikon" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none">
+      <path d="M32 4 L38 26 L60 32 L38 38 L32 60 L26 38 L4 32 L26 26 Z" fill="#fde68a" stroke="#fbbf24" stroke-width="1.5"/>
+    </svg>
+  </div>
+  <div class="hero-titik">✧ Kisah Teladan &amp; Ke-Salehan ✧</div>
+  <h1>Kisah Para Nabi<br><span class="emas-teks">Penuh Kesabaran</span></h1>
+  <p class="hero-sub">Menelusuri perjalanan <b>Nabi Idris</b>, <b>Nabi Ismail</b>, dan <b>Nabi Zulkifli</b> — para nabi yang masyhur dengan kesabaran dan ke-salehan, dari zaman pra-Masehi, melintasi zaman Jahiliah, hingga nilai-nilai mereka tetap hidup menjelang era Imam Mahdi.</p>
+  <div class="hero-nabi">
+    <a href="#nabi-idris" class="n-idris"><span class="angka">1</span> Nabi Idris a.s.</a>
+    <a href="#nabi-ismail" class="n-ismail"><span class="angka">2</span> Nabi Ismail a.s.</a>
+    <a href="#nabi-zulkifli" class="n-zulkifli"><span class="angka">3</span> Nabi Zulkifli a.s.</a>
+  </div>
+  <div class="scroll-cue"><span>Gulir untuk membaca</span><span class="panah">▼</span></div>
+</header>
+<style>
+/* ---------- Layout umum ---------- */
+main { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+section.blok { padding: 74px 0 30px; }
+
+.kicker {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: .74rem; font-weight: 800; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--ungu);
+  background: #ede9fe; padding: 7px 16px; border-radius: 999px; margin-bottom: 14px;
+}
+.kicker.turkis { color: var(--teal-tua); background: #ccfbf1; }
+.kicker.emas { color: #92400e; background: #fef3c7; }
+.kicker.pink { color: #9d174d; background: #fce7f3; }
+
+h2.judul-blok {
+  font-size: clamp(1.5rem, 3.6vw, 2.2rem); font-weight: 900; line-height: 1.3;
+  margin-bottom: 12px;
+}
+.gr-teks {
+  background: linear-gradient(90deg, var(--ungu), var(--teal));
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.gr-teks-emas {
+  background: linear-gradient(90deg, #b45309, #d97706, #f59e0b);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+p.pengantar { color: var(--abu); max-width: 780px; font-size: 1.02rem; margin-bottom: 30px; }
+p.pengantar b, .konten-nabi p b { color: var(--ink); }
+
+/* ---------- Kartu bento ---------- */
+.bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin: 26px 0 10px; }
+.bento .kartu {
+  background: var(--kartu); border-radius: 22px; padding: 26px 22px;
+  border: 1px solid rgba(124,58,237,.09);
+  box-shadow: 0 8px 26px rgba(76,29,149,.07);
+  transition: transform .3s ease, box-shadow .3s ease;
+  position: relative; overflow: hidden;
+}
+.bento .kartu:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(76,29,149,.14); }
+.bento .kartu::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+}
+.kartu.k1::before { background: linear-gradient(90deg, #0d9488, #5eead4); }
+.kartu.k2::before { background: linear-gradient(90deg, #7c3aed, #c4b5fd); }
+.kartu.k3::before { background: linear-gradient(90deg, #d97706, #fcd34d); }
+.kartu .ikon-besar {
+  width: 52px; height: 52px; border-radius: 15px; display: flex;
+  align-items: center; justify-content: center; font-size: 26px; margin-bottom: 14px;
+}
+.k1 .ikon-besar { background: #ccfbf1; }
+.k2 .ikon-besar { background: #ede9fe; }
+.k3 .ikon-besar { background: #fef3c7; }
+.kartu h3 { font-size: 1.08rem; font-weight: 800; margin-bottom: 8px; }
+.kartu p { font-size: .92rem; color: var(--abu); }
+
+@media (max-width: 860px) { .bento { grid-template-columns: 1fr; } }
+
+/* ---------- Animasi muncul ---------- */
+.muncul {
+  opacity: 0; transform: translateY(34px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.muncul.tampak { opacity: 1; transform: translateY(0); }
+
+/* ---------- AYAT AL-QUR'AN ---------- */
+.ayat {
+  position: relative; margin: 26px 0; padding: 26px 26px 20px;
+  border-radius: 20px; overflow: hidden;
+  background: linear-gradient(135deg, #f5f3ff, #ecfdf5);
+  border: 1.5px solid #ddd6fe;
+  box-shadow: 0 8px 26px rgba(124,58,237,.08);
+}
+.ayat::before {
+  content: "﴾"; position: absolute; right: 14px; top: -12px;
+  font-size: 4.6rem; color: rgba(124,58,237,.10); font-weight: 700;
+}
+.ayat .label-ayat {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .72rem; font-weight: 800; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #6d28d9;
+  background: #ede9fe; border-radius: 999px; padding: 5px 13px; margin-bottom: 14px;
+}
+.ayat .teks-arab {
+  direction: rtl; text-align: right;
+  font-family: 'Traditional Arabic', 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', 'Arabic Typesetting', serif;
+  font-size: clamp(1.25rem, 2.6vw, 1.55rem);
+  line-height: 2.3; color: #312e81; margin-bottom: 14px;
+}
+.ayat .terjemah {
+  font-size: .95rem; color: #374151; font-style: italic;
+  padding-left: 14px; border-left: 3px solid #a78bfa;
+}
+.ayat .rujukan {
+  margin-top: 10px; font-size: .78rem; font-weight: 800; color: var(--emas);
+  text-align: right; letter-spacing: .5px;
+}
+
+/* ---------- Kotak hikmah ---------- */
+.hikmah {
+  margin: 24px 0; padding: 24px 26px; border-radius: 20px;
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  border: 1.5px solid #6ee7b7; position: relative; overflow: hidden;
+}
+.hikmah::after {
+  content: "🌱"; position: absolute; right: 18px; bottom: -8px; font-size: 3.4rem; opacity: .16;
+}
+.hikmah h4 {
+  font-size: 1rem; font-weight: 900; color: #065f46; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 9px;
+}
+.hikmah ul { list-style: none; }
+.hikmah li {
+  position: relative; padding-left: 26px; margin: 9px 0;
+  font-size: .94rem; color: #14532d;
+}
+.hikmah li::before {
+  content: "◆"; position: absolute; left: 4px; top: 1px;
+  color: #10b981; font-size: .72rem;
+}
+
+/* ---------- BAB NABI ---------- */
+article.nabi {
+  margin: 60px 0; border-radius: 30px; overflow: hidden;
+  background: var(--kartu);
+  border: 1px solid rgba(124,58,237,.1);
+  box-shadow: 0 14px 44px rgba(76,29,149,.1);
+}
+.nabi-head {
+  padding: 46px 40px 38px; position: relative; overflow: hidden;
+  display: flex; gap: 26px; align-items: center; flex-wrap: wrap;
+}
+.nabi-idris .nabi-head { background: linear-gradient(120deg, #0f766e, #0d9488 45%, #2dd4bf); }
+.nabi-ismail .nabi-head { background: linear-gradient(120deg, #5b21b6, #7c3aed 45%, #a78bfa); }
+.nabi-zulkifli .nabi-head { background: linear-gradient(120deg, #92400e, #d97706 45%, #fbbf24); }
+.nabi-head::after {
+  content: "✦ ✧ ✦"; position: absolute; right: 26px; top: 20px;
+  color: rgba(255,255,255,.35); font-size: 1.4rem; letter-spacing: 8px;
+}
+.nabi-avatar {
+  width: 96px; height: 96px; flex-shrink: 0; border-radius: 26px;
+  background: rgba(255,255,255,.2); border: 2px solid rgba(255,255,255,.5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 44px; backdrop-filter: blur(6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.22);
+}
+.nabi-head h3 {
+  color: #fff; font-size: clamp(1.4rem, 3.2vw, 1.9rem); font-weight: 900; line-height: 1.3;
+}
+.nabi-head .julukan { color: rgba(255,255,255,.92); font-size: .95rem; margin-top: 4px; max-width: 640px; }
+.nabi-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.nabi-chips span {
+  font-size: .72rem; font-weight: 800; padding: 5px 13px; border-radius: 999px;
+  background: rgba(255,255,255,.22); color: #fff; border: 1px solid rgba(255,255,255,.4);
+  backdrop-filter: blur(4px);
+}
+.konten-nabi { padding: 36px 40px 40px; }
+.konten-nabi h4.sub {
+  display: flex; align-items: center; gap: 11px;
+  font-size: 1.14rem; font-weight: 900; margin: 30px 0 12px;
+}
+.nabi-idris .konten-nabi h4.sub { color: var(--teal-tua); }
+.nabi-ismail .konten-nabi h4.sub { color: #5b21b6; }
+.nabi-zulkifli .konten-nabi h4.sub { color: #92400e; }
+.konten-nabi h4.sub .bullet {
+  width: 30px; height: 30px; border-radius: 10px; font-size: .95rem;
+  display: inline-flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0;
+}
+.nabi-idris .bullet { background: linear-gradient(135deg, #0d9488, #2dd4bf); }
+.nabi-ismail .bullet { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+.nabi-zulkifli .bullet { background: linear-gradient(135deg, #d97706, #fbbf24); }
+.konten-nabi p { color: #3f3a52; font-size: .98rem; margin: 10px 0; text-align: justify; }
+.kartu-fakta {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
+  margin: 20px 0 6px;
+}
+.fakta {
+  border-radius: 15px; padding: 14px 16px; font-size: .85rem;
+  border: 1.5px dashed; line-height: 1.6;
+}
+.nabi-idris .fakta { background: #f0fdfa; border-color: #5eead4; color: #134e4a; }
+.nabi-ismail .fakta { background: #f5f3ff; border-color: #c4b5fd; color: #3b0764; }
+.nabi-zulkifli .fakta { background: #fffbeb; border-color: #fcd34d; color: #713f12; }
+.fakta b { display: block; font-size: .72rem; letter-spacing: 1.5px; text-transform: uppercase; opacity: .75; margin-bottom: 2px; }
+</style>
+<style>
+/* ---------- TIMELINE INTERAKTIF ---------- */
+.tl-luar {
+  position: relative; margin: 40px 0 8px; padding: 30px 6px 10px;
+  background: #fff; border-radius: 26px;
+  border: 1px solid rgba(124,58,237,.1);
+  box-shadow: 0 12px 38px rgba(76,29,149,.09);
+  overflow: hidden;
+}
+.tl-jalur {
+  position: relative; display: flex; align-items: flex-start;
+  gap: 0; padding: 26px 18px 8px; overflow-x: auto; scroll-behavior: smooth;
+}
+.tl-jalur::before {
+  content: ""; position: absolute; top: 47px; left: 40px; right: 40px; height: 6px;
+  background: linear-gradient(90deg, #0d9488, #7c3aed, #d97706, #db2777, #7c3aed);
+  border-radius: 999px; opacity: .3;
+}
+.tl-node {
+  position: relative; flex: 0 0 118px; background: none; border: none; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  padding: 0 4px; font-family: inherit; -webkit-tap-highlight-color: transparent;
+}
+.tl-dot {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem; color: #fff; z-index: 2;
+  border: 3.5px solid #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.tl-node:hover .tl-dot { transform: scale(1.18); }
+.tl-node.aktif .tl-dot { transform: scale(1.28); box-shadow: 0 0 0 6px rgba(124,58,237,.2), 0 6px 18px rgba(0,0,0,.22); }
+.tl-emas {
+  position: absolute; top: -20px; font-size: .68rem; font-weight: 800; letter-spacing: .5px;
+  color: var(--emas); background: #fef3c7; border-radius: 999px; padding: 2px 9px; white-space: nowrap;
+}
+.tl-nama {
+  font-size: .76rem; font-weight: 800; color: var(--abu); text-align: center; line-height: 1.35;
+  transition: color .25s ease;
+}
+.tl-node.aktif .tl-nama { color: var(--ungu-tua); }
+.tl-detail {
+  margin: 18px 26px 26px; border-radius: 18px; padding: 24px 26px;
+  background: linear-gradient(135deg, #f5f3ff, #faf5ff);
+  border: 1.5px solid #ddd6fe; min-height: 128px;
+  transition: background .3s ease;
+}
+.tl-detail h4 { font-size: 1.06rem; font-weight: 900; margin-bottom: 7px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.tl-detail h4 .tl-era {
+  font-size: .68rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 11px; border-radius: 999px; color: #fff;
+}
+.tl-detail p { font-size: .93rem; color: var(--abu); }
+.tl-hint { font-size: .78rem; color: #9c94b8; margin: 4px 6px 0; text-align: center; }
+
+/* ---------- BAB ERA (Jahiliah & Mahdi) ---------- */
+article.era {
+  margin: 56px 0; border-radius: 30px; overflow: hidden;
+  box-shadow: 0 14px 44px rgba(76,29,149,.1);
+  border: 1px solid rgba(124,58,237,.1);
+  background: var(--kartu);
+}
+.era-jahiliah > .era-head { background: linear-gradient(120deg, #334155, #475569 50%, #64748b); }
+.era-mahdi > .era-head { background: linear-gradient(120deg, #86198f, #a21caf 45%, #e879f9); }
+.era-head {
+  padding: 40px 40px 34px; position: relative; overflow: hidden;
+}
+.era-head::after {
+  content: "☾ ✦ ☽"; position: absolute; right: 30px; bottom: 16px;
+  color: rgba(255,255,255,.3); font-size: 1.5rem; letter-spacing: 10px;
+}
+.era-head .kicker-terang {
+  display: inline-block; font-size: .72rem; font-weight: 800; letter-spacing: 2.5px;
+  text-transform: uppercase; color: #fde68a; margin-bottom: 10px;
+}
+.era-head h3 { color: #fff; font-size: clamp(1.35rem, 3vw, 1.8rem); font-weight: 900; }
+.era-head p { color: rgba(255,255,255,.9); font-size: .95rem; max-width: 700px; margin-top: 8px; }
+.era-body { padding: 34px 40px 38px; }
+.era-body p { color: #3f3a52; font-size: .97rem; margin: 10px 0; text-align: justify; }
+.kotak-perhatian {
+  margin: 22px 0; padding: 20px 24px; border-radius: 17px;
+  background: #fffbeb; border: 1.5px solid #fcd34d;
+  font-size: .92rem; color: #713f12;
+}
+.kotak-perhatian b { color: #92400e; }
+.dua-kolom { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+@media (max-width: 760px) { .dua-kolom { grid-template-columns: 1fr; } }
+.kolom-mini {
+  border-radius: 17px; padding: 20px 22px; font-size: .92rem;
+}
+.kolom-mini h5 { font-size: .95rem; font-weight: 900; margin-bottom: 8px; }
+.kolom-mini p { font-size: .9rem; margin: 6px 0; }
+.kolom-ungu { background: #f5f3ff; border: 1.5px solid #ddd6fe; }
+.kolom-ungu h5 { color: #5b21b6; }
+.kolom-pink { background: #fdf2f8; border: 1.5px solid #fbcfe8; }
+.kolom-pink h5 { color: #9d174d; }
+
+/* ---------- HADITS ---------- */
+.hadits {
+  margin: 24px 0; padding: 24px 26px; border-radius: 20px;
+  background: linear-gradient(135deg, #fdf2f8, #faf5ff);
+  border: 1.5px solid #f5d0fe; position: relative; overflow: hidden;
+}
+.hadits::before {
+  content: "❝"; position: absolute; left: 16px; top: 2px; font-size: 3.4rem;
+  color: rgba(219,39,119,.14); font-weight: 800;
+}
+.hadits .isi-hadits { font-size: .96rem; color: #831843; font-style: italic; margin: 6px 0 8px 12px; }
+.hadits .sumber { font-size: .78rem; font-weight: 800; color: var(--pink); text-align: right; }
+
+/* ---------- Footer & tombol ke atas ---------- */
+footer {
+  margin-top: 70px; padding: 54px 24px 110px; text-align: center;
+  background: linear-gradient(135deg, #2e1065, #4c1d95 45%, #0f766e 110%);
+  color: #ede9fe;
+}
+footer .bismillah {
+  font-family: 'Traditional Arabic', 'Amiri', 'Noto Naskh Arabic', serif;
+  direction: rtl; font-size: 1.5rem; color: #fde68a; margin-bottom: 14px;
+}
+footer h4 { font-size: 1.15rem; font-weight: 900; margin-bottom: 10px; color: #fff; }
+footer p { font-size: .88rem; max-width: 640px; margin: 6px auto; opacity: .85; }
+footer .garis-emas { width: 90px; height: 3px; background: linear-gradient(90deg, transparent, #fbbf24, transparent); margin: 20px auto; border-radius: 99px; }
+footer .kecil { font-size: .75rem; opacity: .6; margin-top: 16px; }
+
+#btnAtas {
+  position: fixed; right: 22px; bottom: 24px; z-index: 950;
+  width: 52px; height: 52px; border-radius: 50%; border: none; cursor: pointer;
+  background: linear-gradient(135deg, var(--ungu), var(--teal));
+  color: #fff; font-size: 1.25rem; font-weight: 900;
+  box-shadow: 0 10px 26px rgba(124,58,237,.4);
+  opacity: 0; visibility: hidden; transform: translateY(16px);
+  transition: all .35s ease;
+}
+#btnAtas.tampak-btn { opacity: 1; visibility: visible; transform: translateY(0); }
+#btnAtas:hover { transform: translateY(-4px) scale(1.07); }
+
+@media (max-width: 640px) {
+  .nabi-head, .konten-nabi, .era-head, .era-body { padding-left: 24px; padding-right: 24px; }
+  .nabi-head { padding-top: 32px; padding-bottom: 30px; }
+  .konten-nabi { padding: 28px 24px 32px; }
+  .tl-detail { margin: 14px 16px 20px; }
+  section.blok { padding: 56px 0 20px; }
+}
+</style>
+<main>
+
+<!-- ================= PEMBUKA ================= -->
+<section class="blok" id="pengantar">
+  <div class="muncul">
+    <span class="kicker">✧ Pengantar</span>
+    <h2 class="judul-blok">Kenalan dengan <span class="gr-teks">Tiga Nabi Penuh Sabar</span></h2>
+    <p class="pengantar">
+      Di antara ribuan nabi yang Allah Ta'ala turunkan, Al-Qur'an secara khusus memuji sekelompok nabi dengan gelar yang luar biasa: <i>ash-shābirīn</i> — para nabi yang masyhur dengan kesabaran. Sebagian besar dari mereka hidup pada masa <b>pra-Masehi</b>, jauh sebelum penanggalan tahun hijriah dan masehi dikenal. Mereka diuji dengan berbagai cobaan berat — ditinggal di padang gurun, dihadapkan pada perintah menyembelih, diminta mengurus umat yang sedang kacau — namun semuanya dilalui dengan hati yang lapang dan lidah yang dzikir. Selain sabar, mereka juga adalah <b>orang-orang saleh</b>: perkataan mereka jujur, tangan mereka bermanfaat, dan hati mereka selalu berikhtiar kepada Allah.
+    </p>
+  </div>
+  <div class="bento">
+    <div class="kartu k1 muncul">
+      <div class="ikon-besar">📖</div>
+      <h3>Nabi Idris a.s.</h3>
+      <p>Nabi pertama yang dianugerahi kitab dan tulisan. Hidup sebelum Nabi Nuh, berdakwah dengan sabar ketika manusia pertama kali mulai menyimpang, lalu Allah menganugerahkan derajat yang tinggi.</p>
+    </div>
+    <div class="kartu k2 muncul">
+      <div class="ikon-besar">🕋</div>
+      <h3>Nabi Ismail a.s.</h3>
+      <p>Teladan kesabaran sejak kecil: ditinggal di lembah tandus, nyaris disembelih demi menepati mimpi ayahnya, hingga ikut membangun Baitullah. Potret anak saleh sejati.</p>
+    </div>
+    <div class="kartu k3 muncul">
+      <div class="ikon-besar">⚖️</div>
+      <h3>Nabi Zulkifli a.s.</h3>
+      <p>Memegang amanat berat memimpin umat yang terpecah. Bersabar menghadapi manusia yang menyakitinya, memaafkan, dan akhirnya membawa umatnya kembali tertib.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIMELINE ================= -->
+<section class="blok" id="timeline">
+  <div class="muncul">
+    <span class="kicker emas">✧ Garis Waktu Interaktif</span>
+    <h2 class="judul-blok">Perjalanan Iman <span class="gr-teks-emas">Lintas Zaman</span></h2>
+    <p class="pengantar">
+      Klik setiap titik pada garis waktu untuk membaca penjelasnya. Garis waktu ini menunjukkan posisi ketiga nabi di antara para nabi lainnya — dari zaman pra-Masehi, periode di antara para rasul (dalam bahasa Arab disebut <i>fatrah</i>), zaman Jahiliah, kedatangan Nabi Muhammad ﷺ, hingga era akhir zaman di mana Imam Mahdi dan Nabi Isa a.s. akan muncul. Ketiga nabi pembahasan kita hidup pada era <b>pra-Masehi</b>, namun teladan mereka melintasi semua periode.
+    </p>
+  </div>
+  <div class="tl-luar muncul">
+    <div class="tl-jalur" id="tlJalur" role="tablist" aria-label="Garis waktu sejarah para nabi"></div>
+    <div class="tl-detail" id="tlDetail" aria-live="polite"></div>
+    <p class="tl-hint">↑ Geser garis waktu ke samping pada layar kecil, lalu klik titik yang ingin dibaca ↑</p>
+  </div>
+</section>
+<!-- ================= BAB 1: NABI IDRIS ================= -->
+<article class="nabi nabi-idris" id="nabi-idris">
+  <div class="nabi-head">
+    <div class="nabi-avatar" aria-hidden="true">📖</div>
+    <div>
+      <h3>Nabi Idris a.s.</h3>
+      <p class="julukan">Nabi pertama yang diberi kitab dan menulis dengan pena — diangkat ke derajat yang tinggi karena kesabarannya.</p>
+      <div class="nabi-chips">
+        <span>📜 Era Pra-Masehi (sebelum Nabi Nuh)</span>
+        <span>🗺️ Babilonia (Irak), wafat di Mesir menurut riwayat</span>
+        <span>⭐ Ash-Shiddiq · Sabar · Saleh</span>
+      </div>
+    </div>
+  </div>
+  <div class="konten-nabi">
+
+    <div class="kartu-fakta muncul">
+      <div class="fakta"><b>Posisi Garis Waktu</b>Generasi ke-6 keturunan Nabi Adam a.s., leluhur Nabi Nuh a.s.</div>
+      <div class="fakta"><b>Zaman</b>Pra-Masehi, ribuan tahun sebelum penanggalan masehi dikenal</div>
+      <div class="fakta"><b>Konteks Umat</b>Awal-awal munculnya penyimpangan &amp; penyembahan berhala pertama</div>
+      <div class="fakta"><b>Gelar dalam Al-Qur'an</b>Ash-Shiddiq, Nabiyya (nabi), Ulul Azmi dalam sebagian riwayat</div>
+    </div>
+
+    <h4 class="sub"><span class="bullet">1</span> Latar Zaman: Ketika Manusia Mulai Menyimpang</h4>
+    <p>Setelah wafatnya Nabi Adam a.s., anak cucu <b>Nabi Syits a.s.</b> (Syis/Sheeth) hidup dalam satu umat yang bermacam-macam: sebagian tetap teguh di atas tauhid, sebagian mulai terpengaruh oleh bisikan setan. Pada generasi inilah — menurut penjelasan para mufasir seperti Ibnu Katsir dalam <i>Al-Bidayah wan-Nihayah</i> — pertama kali muncul penyembahan berhala. Ketika sekelompok orang saleh wafat, setan menghasut orang-orang yang menyayangi mereka agar mengabadikan wajah mereka dalam bentuk patung, dengan dalih "untuk mengingatkan pada kebaikan". Beberapa generasi kemudian, patung-patung itu mulai disembah; inilah asal mula berhala bernama <b>Wadd, Suwa', Yaghuts, Ya'uq, dan Nasr</b> — nama yang kelak disebut kembali dalam QS. Nuh ayat 23.</p>
+    <p>Di tengah gelapnya penyimpangan pertama itu, Allah mengutus seorang nabi dari kalangan mereka sendiri: <b>Idris a.s.</b>, keturunan Syits yang tumbuh menjadi pemuda pembaca kitab, tampan wajahnya, gemar berpakaian rapi, dan masyhur dengan kejujuran hingga digelari <i>Ash-Shiddiq</i> (sang pengaku kebenaran). Idris hidup sekitar empat generasi sebelum datangnya Nabi Nuh a.s., dalam rentang umur yang oleh para sejarawan diperkirakan jauh melampaui seratus tahun — sesuai standar umur manusia pada zamannya.</p>
+
+    <h4 class="sub"><span class="bullet">2</span> Kisahnya: Dakwah yang Sabar dan Tangan yang Terampil</h4>
+    <p>Idris a.s. menerima kenabian dan dianugerahi <b>kitab wahyu</b> — ia adalah nabi pertama yang menulis dengan pena dan tinta, menjadikan ia pelopor ilmu tulis-menulis bagi manusia. Para ulama menyebutkan bahwa ia menghimpun ajaran tauhid, peraturan hidup, dan nasihat-nasihat kebenaran dalam kitab tersebut. Dakwahnya tidak mudah: sebagian kaumnya menerima, sebagian lagi menolak dan mencela. Namun Idris tidak pernah lelah. Ia menyampaikan kebenaran dengan tenang, memaafkan orang yang menyakitinya, dan terus istiqamah — bersabar dalam mengajak, sabar dalam dikecewakan, dan sabar dalam menanggung beban kerasulan.</p>
+    <p>Selain menjadi nabi, Idris a.s. juga dikenal sebagai <b>perajin yang saleh</b>. Riwayat para ulama menyebutkan ia pandai menjahit pakaian dan dianggap pelopor pekerjaan menjahit (jahitan jarum). Dari sini kita belajar bahwa kedudukan di sisi Allah tidak hanya dicapai lewat ibadah ritual semata, melainkan juga lewat kerja keras yang halal, keterampilan yang bermanfaat bagi sesama, dan hati yang tetap ikhlas di balik semua itu. Idris menggabungkan tiga hal yang jarang berkumpul sekaligus: ilmu, amal, dan kesabaran.</p>
+    <p>Sebagai balasan atas kesabarannya, Allah mengangkatnya ke derajat yang tinggi. Ia wafat dalam keadaan dianugerahi kemuliaan besar, dan Al-Qur'an mencatat keistimewaannya hingga hari kiamat. Disebutkan pula dalam sejumlah riwayat bahwa Nabi Muhammad ﷺ bertemu dengan Idris di langit keempat pada peristiwa Isra' Mi'raj — sebuah tanda betapa tingginya kedudukan nabi yang sabar ini.</p>
+
+    <div class="ayat muncul">
+      <span class="label-ayat">﷽ Ayat tentang Nabi Idris</span>
+      <div class="teks-arab">وَٱذْكُرْ فِى ٱلْكِتَٰبِ إِدْرِيسَ ۚ إِنَّهُۥ كَانَ صِدِّيقًا نَّبِيًّا ﴿٥٦﴾ وَرَفَعْنَٰهُ مَكَانًا عَلِيًّا ﴿٥٧﴾</div>
+      <div class="terjemah">"Dan ceritakanlah (Muhammad) kisah Idris (yang ada) dalam Al-Qur'an. Sesungguhnya dia adalah seorang yang sangat benar (Ash-Shiddiq), seorang nabi. Dan Kami telah mengangkatnya ke tempat yang tinggi."</div>
+      <div class="rujukan">— QS. Maryam [19]: 56–57</div>
+    </div>
+
+    <h4 class="sub"><span class="bullet">3</span> Teladan Kesabaran &amp; Ke-Salehan</h4>
+    <p>Idris a.s. mengajarkan bahwa <b>sabar bukan hanya menahan diri saat ditimpa musibah, tetapi juga menahan kesabaran saat berdakwah</b> — menghadapi manusia yang bosan mendengar kebenaran berulang-ulang. Ia tetap lembut kepada kaumnya meski sebagian mempermainkan ajarannya. Ia juga mencontohkan keseimbangan: pandai membaca kitab sekaligus pandai menjahit, tekun beribadah sekaligus tekun bekerja. Diri beliau menjadi bukti bahwa seorang pemimpin agama tidak menjauhi dunia, melainkan mengambil dunia dengan cara yang diridai Allah.</p>
+
+    <div class="hikmah muncul">
+      <h4>🌱 Hikmah untuk Kehidupan Kita</h4>
+      <ul>
+        <li><b>Mulailah menulis dan mencatat</b> — Idris adalah nabi pertama yang menulis; ilmu yang dicatat akan hidup lebih lama dari yang dihafal saja.</li>
+        <li><b>Sabar dalam mendakwahkan kebaikan</b> kepada keluarga dan teman, walau lambat melihat hasilnya.</li>
+        <li><b>Gabungkan ilmu dan keterampilan</b> — belajar agama tidak boleh membuat malas bekerja, dan bekerja tidak boleh melupakan Allah.</li>
+        <li><b>Jaga penampilan dan kebersihan</b> — riwayat menyebut Idris gemar berpakaian rapi; ke-salehan juga tampak dari kerapian diri.</li>
+        <li><b>Perbaiki diri sebelum zaman memburuk</b> — Idris bangkit justru di saat manusia pertama kali mulai menyimpang.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- ================= BAB 2: NABI ISMAIL ================= -->
+<article class="nabi nabi-ismail" id="nabi-ismail">
+  <div class="nabi-head">
+    <div class="nabi-avatar" aria-hidden="true">🕋</div>
+    <div>
+      <h3>Nabi Ismail a.s.</h3>
+      <p class="julukan">Ayun kesabaran — anak yang menyerahkan diri pada takdir Allah, leluhur Nabi Muhammad ﷺ, dan pembangun Ka'bah bersama ayahnya.</p>
+      <div class="nabi-chips">
+        <span>📜 Era Pra-Masehi (± 1900 SM)</span>
+        <span>🗺️ Kanaan → Makkah (Jazirah Arab)</span>
+        <span>⭐ Ash-Shiddiq · Rasul · Ummi (terpercaya)</span>
+      </div>
+    </div>
+  </div>
+  <div class="konten-nabi">
+
+    <div class="kartu-fakta muncul">
+      <div class="fakta"><b>Posisi Garis Waktu</b>Anak Nabi Ibrahim a.s., saudara Ishaq, leluhur Nabi Muhammad ﷺ</div>
+      <div class="fakta"><b>Zaman</b>Pra-Masehi, ± 19 abad sebelum Masehi</div>
+      <div class="fakta"><b>Ibu</b>Hajar binti Mahram, istri Nabi Ibrahim a.s.</div>
+      <div class="fakta"><b>Warisan</b>Zamzam, Ka'bah, tradisi kurban, hingga keturunan bangsa Arab</div>
+    </div>
+
+    <h4 class="sub"><span class="bullet">1</span> Latar Zaman: Anak dari Doa di Usia Senja</h4>
+    <p>Ismail a.s. lahir dari doa yang sangat lama ditunggu. Nabi Ibrahim a.s. telah bertahun-tahun hidup tanpa anak, hingga akhirnya ia memohon: <i>"Ya Tuhanku, berilah aku (anak) dari orang-orang saleh"</i> (QS. Ash-Shaffat: 100). Permintaan itu dikabulkan di usia senjanya, dan Al-Qur'an menyanjung kabar gembira itu dengan kalimat indah: <i>"Maka Kami diberitakan dia dengan berita gembira seorang anak yang sangat sabar"</i>. Sejak lahir, Ismail telah ditetapkan sebagai lambang kesabaran — dan hidupnya kemudian membuktikan gelar itu satu per satu.</p>
+
+    <h4 class="sub"><span class="bullet">2</span> Kisahnya: Tiga Ujian Besar yang Dilalui dengan Senyum</h4>
+    <p><b>Ujian pertama: ditinggalkan di lembah tandus.</b> Atas perintah Allah, Ibrahim a.s. membawa Ismail yang masih bayi bersama ibunya, Hajar, ke sebuah lembah kosong tanpa tanaman, tanpa air, dan tanpa penghuni: lembah yang kelak menjadi Makkah. Ketika Ibrahim hendak pergi, Hajar bertanya, "Kepada siapa engkau menitipkan kami di sini?" Ibrahim hanya menjawab, "Kepada Allah." Hajar pun menjawab dengan iman yang teguh, <i>"Kalau begitu, Allah tidak akan menyia-nyiakan kami."</i> Dari kisah pencarian air Hajar yang berlarian antara bukit Safa dan Marwah, memancarlah air <b>Zamzam</b> yang mengalir hingga hari ini. Ismail tumbuh di lembah itu, menggembala bersama kaum Jurhum, dan terbiasa dengan hidup sederhana yang penuh perjuangan.</p>
+    <p><b>Ujian kedua: mimpi penyembelihan.</b> Ketika Ismail remaja dan cukup untuk bersama ayahnya bekerja, Ibrahim a.s. bermimpi menyembelih putranya — dan mimpi seorang nabi adalah wahyu. Ketika ayahnya menyampaikan mimpinya, jawaban Ismail menjadi salah satu kalimat paling agung dalam sejarah kesabaran: <i>"Wahai ayahku, lakukanlah apa yang diperintahkan kepadamu (Allah); insya Allah engkau akan mendapatiku dari orang-orang yang sabar."</i> Bahkan dalam sebagian riwayat, Ismail menambahkan, "Ikatlah tanganku agar jangan sampai darahku mengguncang kehati-hatimu, dan jangan engkau ceritakan kepada ibuku." Ketika keduanya telah berserah diri, Allah membalikkan perintah itu: Ismail ditebus dengan kurban yang besar. Momen inilah yang diabadikan dalam ibadah qurban dan Idul Adha hingga akhir zaman.</p>
+    <p><b>Ujian ketiga: membangun rumah Allah.</b> Bersama ayahnya, Ismail mengangkat fondasi Ka'bah sambil berdoa: <i>"Ya Tuhanku, terimalah (amal) dari kami."</i> Di sinilah Makkah lahir sebagai pusat tauhid, dan dari keturunan Ismail-lah lahirlah bangsa Arab — hingga akhirnya keluar <b>Nabi Muhammad ﷺ</b>, penutup para nabi. Ismail sendiri diangkat menjadi nabi dan rasul untuk kaumnya, menyerukan shalat dan zakat, dan terkenal sebagai <i>shādiq al-wa'd</i> — orang yang selalu menepati janji.</p>
+
+    <div class="ayat muncul">
+      <span class="label-ayat">﷽ Ayat tentang Ujian Penyembelihan</span>
+      <div class="teks-arab">فَلَمَّا بَلَغَ مَعَهُ ٱلسَّعْىَ قَالَ يَٰبُنَىَّ إِنِّىٓ أَرَىٰ فِى ٱلْمَنَامِ أَنِّىٓ أَذْبَحُكَ فَٱنظُرْ مَاذَا تَرَىٰ ۚ قَالَ يَٰٓأَبَتِ ٱفْعَلْ مَا تُؤْمَرُ ۖ سَتَجِدُنِىٓ إِن شَآءَ ٱللَّهُ مِنَ ٱلصَّٰبِرِينَ</div>
+      <div class="terjemah">"Maka tatkala anak itu sampai (pada usia) sanggup berusaha bersamanya, (Ibrahim) berkata, 'Wahai anakku, sesungguhnya aku bermimpi bahwa aku menyembelihmu. Maka pikirkan bagaimana pendapatmu.' Dia (Ismail) menjawab, 'Wahai ayahku, lakukanlah apa yang diperintahkan (Allah) kepadamu; insya Allah engkau akan mendapatiku termasuk orang yang sabar.'"</div>
+      <div class="rujukan">— QS. Ash-Shaffat [37]: 102</div>
+    </div>
+
+    <div class="ayat muncul">
+      <span class="label-ayat">﷽ Ayat Pujian untuk Ismail</span>
+      <div class="teks-arab">وَٱذْكُرْ فِى ٱلْكِتَٰبِ إِسْمَٰعِيلَ ۚ إِنَّهُۥ كَانَ صَادِقَ ٱلْوَعْدِ وَكَانَ رَسُولًا نَّبِيًّا ﴿٥٤﴾ وَكَانَ يَأْمُرُ أَهْلَهُ بِٱلصَّلَوٰةِ وَٱلزَّكَوٰةِ وَكَانَ عِندَ رَبِّهِۦ مَرْضِيًّا ﴿٥٥﴾</div>
+      <div class="terjemah">"Dan ceritakanlah (Muhammad) dalam Al-Qur'an tentang Ismail. Sesungguhnya dia seorang yang benar janjinya dan dia seorang rasul seorang nabi. Dan dia menyuruh kaumnya mengerjakan shalat dan (menunaikan) zakat, dan dia seorang yang diridai di sisi Tuhannya."</div>
+      <div class="rujukan">— QS. Maryam [19]: 54–55</div>
+    </div>
+
+    <h4 class="sub"><span class="bullet">3</span> Teladan Kesabaran &amp; Ke-Salehan</h4>
+    <p>Kesabaran Ismail a.s. memiliki ciri khas: ia <b>sabar sejak muda dan sabar secara sukarela</b>. Ia tidak sekadar menerima ujian, tetapi menghadapinya dengan pertimbangan matang ("pikirkan bagaimana pendapatmu, wahai ayahku") dan penyerahan diri penuh ("insya Allah engkau akan mendapatiku dari orang-orang yang sabar"). Di sisi lain, ke-salehannya terlihat dari kesalehan sosialnya: ia menyuruh keluarganya beribadah, menunaikan hak sesama (zakat), dan selalu menepati janji. Patut dicatat, kesabaran Ismail lahir dari rumahtangga yang saleh — ayah yang tabah dan ibu yang optimis kepada Allah — sehingga kisah ini sekaligus menjadi kurikulum pendidikan anak dalam Islam.</p>
+
+    <div class="hikmah muncul">
+      <h4>🌱 Hikmah untuk Kehidupan Kita</h4>
+      <ul>
+        <li><b>Patuhi orang tua dalam kebaikan</b> — Ismail menjawab ayahnya dengan "wahai ayahku" penuh hormat, bahkan di ujian terberat.</li>
+        <li><b>Tanyakan pendapat anak</b> — Ibrahim tetap bertanya "apa pendapatmu?"; keputusan keluarga terbaik melibatkan hati semua anggotanya.</li>
+        <li><b>Tuntaskan ikhtiar dan ketaatan, biarkan Allah yang menentukan balasannya.</b></li>
+        <li><b>Jadikan rumah madrasah pertama</b> — kesabaran Ismail dipupuk sejak kecil oleh Hajar dan Ibrahim.</li>
+        <li><b>Jadilah orang yang bisa dipercaya janjinya</b> — gelar "shādiq al-wa'd" lebih berharga dari segala harta.</li>
+        <li><b>Ingat kembali peristiwa kurban</b> — setiap Idul Adha adalah pengingat akan kesabaran bapak dan anak ini.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- ================= BAB 3: NABI ZULKIFLI ================= -->
+<article class="nabi nabi-zulkifli" id="nabi-zulkifli">
+  <div class="nabi-head">
+    <div class="nabi-avatar" aria-hidden="true">⚖️</div>
+    <div>
+      <h3>Nabi Zulkifli a.s.</h3>
+      <p class="julukan">Pemegang amanat — pemimpin yang disyaratkan menahan marah dan memaafkan, hingga umat yang kacau kembali tertib dan pahalanya berlipat ganda.</p>
+      <div class="nabi-chips">
+        <span>📜 Era Pra-Masehi (setelah Nabi Yusuf)</span>
+        <span>🗺️ Syam / wilayah Bani Israil</span>
+        <span>⭐ Sabar · Pemaaf · Penegak keadilan</span>
+      </div>
+    </div>
+  </div>
+  <div class="konten-nabi">
+
+    <div class="kartu-fakta muncul">
+      <div class="fakta"><b>Posisi Garis Waktu</b>Setelah Nabi Yusuf a.s., pada masa Bani Israil (sebelum Nabi Musa a.s. menurut sebagian riwayat)</div>
+      <div class="fakta"><b>Zaman</b>Pra-Masehi, masa tengah sejarah para nabi Bani Israil</div>
+      <div class="fakta"><b>Makna Nama</b>Dzul-Kifl: pemegang amanat / penerima pahala berlipat</div>
+      <div class="fakta"><b>Penyebutan</b>2 kali dalam Al-Qur'an: QS. Al-Anbiya: 85 dan QS. Shad: 48</div>
+    </div>
+
+    <h4 class="sub"><span class="bullet">1</span> Latar Zaman: Umat yang Sudah Terlanjur Kacau</h4>
+    <p>Zulkifli a.s. tumbuh pada masa Bani Israil — keturunan Nabi Ya'qub a.s. — sebuah umat yang di saat-saat tertentu hidupnya berkecukupan namun hatinya kerap keras kepala. Para ulama sejarah (antara lain Ibnu Katsir dalam <i>Qishash al-Anbiya'</i>) meriwayatkan bahwa Zulkifli hidup setelah generasi Nabi Yusuf a.s., di tengah Bani Israil yang sedang mengalami kegelisahan: mereka sering dikepung musuh, terpecah, dan yang paling parah — mereka terbiasa <b>menyakiti para pemimpin dan nabi mereka</b>. Riwayat menyebutkan pada masa itu seorang nabi mereka, <b>Al-Yasa' a.s.</b>, didatangi oleh seorang raja yang lalim yang menuntut dijawab semua pertanyaannya; ketika tidak terjawab sebagaimana yang diinginkan, raja itu menyiksa dan menganiaya. Melihat keadaan itu, Al-Yasa' berdoa memohon pertolongan Allah, dan Allah memerintahkannya mengangkat seorang pengikut saleh bernama Zulkifli untuk mengambil alih urusan umat.</p>
+    <p>Sebelum menerima amanat besar itu, Al-Yasa' memberinya tiga kesepakatan yang menjadi "syarat jabatan": <b>(1)</b> ia tidak akan marah sepanjang hidupnya, <b>(2)</b> ia akan memaafkan setiap orang yang menyakitinya, dan <b>(3)</b> ia tidak akan membiarkan sesuatu yang haram terjadi di hadapannya. Zulkifli setuju — dan justru kesepakatan inilah yang membuat kisahnya luar biasa. Mungkin mudah menjadi baik di tengah orang baik; Zulkifli dituntut tetap sabar di tengah umat yang terbiasa melawan pemimpin.</p>
+
+    <h4 class="sub"><span class="bullet">2</span> Kisahnya: Memimpin dengan Sabar dan Memaafkan</h4>
+    <p>Sejak hari pertama, ujian datang. Umatnya sengaja menguji kesabarannya: ada yang berbohong di hadapannya saat berperkara, ada yang sengaja menyakitinya dengan kata-kata, bahkan riwayat menyebut sekelompok orang mengajaknya berbuat maksiat dengan paksaan dan tipu daya. Zulkifli tidak pernah membalas dengan amarah. Ia tetap memutus perkara dengan adil, melarang kezaliman, dan memaafkan para penyakitinya — bahkan memperlakukan mereka dengan kebaikan yang mengherankan. Bertahun-tahun berlalu, dan tidak satu pun syarat yang dilanggar. Perlahan-lahan keajaiban kesabaran itu terjadi: <b>umat yang dulu kacau dan keras kepala menjadi tertib kembali</b>. Mereka takut berbuat zalim karena pemimpinnya tegas, namun juga semakin cinta karena pemimpinnya pemaaf.</p>
+    <p>Karena kesabarannya yang berlipat, Allah memperbanyak (meng-kifl-kan) pahalanya — dan inilah salah satu makna nama <i>Dzul-Kifl</i>: orang yang diberi pahala berlipat ganda. Al-Qur'an menyebutnya dua kali dengan pujian khusus: satu kali digolongkan bersama para nabi penuh sabar, satu kali lagi dinyatakan berada "di antara orang-orang yang terbaik". Dalam hadits-hadits Isra' Mi'raj, disebutkan pula bahwa Nabi Muhammad ﷺ bertemu dengan Zulkifli di langit — pertemuan yang hanya diizinkan bagi para nabi yang paling mulia.</p>
+
+    <div class="ayat muncul">
+      <span class="label-ayat">﷽ Ayat tentang Zulkifli (1)</span>
+      <div class="teks-arab">وَإِسْمَٰعِيلَ وَإِدْرِيسَ وَذَا ٱلْكِفْلِ ۖ كُلٌّ مِّنَ ٱلصَّٰبِرِينَ ﴿٨٥﴾ وَأَدْخَلْنَٰهُمْ فِى رَحْمَتِنَآ ۖ إِنَّهُم مِّنَ ٱلصَّٰلِحِينَ ﴿٨٦﴾</div>
+      <div class="terjemah">"Dan (Kami beri petunjuk) Ismail, Idris, dan Zulkifli; dan masing-masing adalah termasuk orang-orang yang sabar. Dan Kami masukkan mereka ke dalam rahmat Kami; dan sesungguhnya mereka termasuk orang-orang yang saleh."</div>
+      <div class="rujukan">— QS. Al-Anbiya [21]: 85–86</div>
+    </div>
+
+    <div class="ayat muncul">
+      <span class="label-ayat">﷽ Ayat tentang Zulkifli (2)</span>
+      <div class="teks-arab">وَٱذْكُرْ إِسْمَٰعِيلَ وَٱلْيَسَعَ وَذَا ٱلْكِفْلِ ۖ وَكُلٌّ مِّنَ ٱلْأَخْيَارِ</div>
+      <div class="terjemah">"Dan ceritakanlah (Muhammad) tentang Ismail, Al-Yasa', dan Zulkifli. Dan masing-masing adalah termasuk orang-orang yang terbaik."</div>
+      <div class="rujukan">— QS. Shad [38]: 48</div>
+    </div>
+
+    <h4 class="sub"><span class="bullet">3</span> Teladan Kesabaran &amp; Ke-Salehan</h4>
+    <p>Zulkifli a.s. adalah bukti bahwa <b>kesabaran paling sulit adalah kesabaran menghadapi manusia</b>, bukan sekadar musibah. Musibah datang dan pergi; namun manusia yang menyakiti kita hadir setiap hari. Zulkifli menahan marah bukan karena lemah, melainkan karena pilihan sadar demi amanat yang ia pegang. Ia juga mencontohkan gabungan dua sifat pemimpin yang jarang berkumpul: <b>tegas terhadap kezaliman, lembut kepada pelaku kesalahan</b>. Dan yang paling menenangkan: tidak ada kesabaran yang sia-sia — Allah mencatatnya sebagai pahala berlipat dan namanya diabadikan dalam kitab-Nya selamanya.</p>
+
+    <div class="hikmah muncul">
+      <h4>🌱 Hikmah untuk Kehidupan Kita</h4>
+      <ul>
+        <li><b>Latih diri menahan marah sejak sekarang</b> — jadikan "tidak marah" sebagai target ibadah harian, seperti kesepakatan Zulkifli.</li>
+        <li><b>Memaafkan orang yang menyakiti</b> — pemaaf bukan berarti membiarkan kezaliman, tapi melepas hati dari dendam.</li>
+        <li><b>Jabatan adalah amanah, bukan kehormatan</b> — sebelum menerima tanggung jawab, hitung dulu kesanggupan kita menjaganya.</li>
+        <li><b>Tetap adil meski diperlakukan tidak adil</b> — jangan biarkan kekecewaan mengubah integritas kita.</li>
+        <li><b>Sabar menghadapi manusia itu bernilai berlipat</b> — kesabaran di sekolah, kantor, atau rumah tidak akan sia-sia.</li>
+        <li><b>Kebaikan yang konsisten mengubah lingkungan</b> — umat yang kacau pun bisa tertib karena keteladanan satu orang.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+<!-- ================= ZAMAN JAHILIAH ================= -->
+<section class="blok" id="jahiliah">
+  <div class="muncul">
+    <span class="kicker">✧ Antara Para Nabi</span>
+    <h2 class="judul-blok">Zaman Jahiliah: <span class="gr-teks">Kelam Sebelum Cahaya</span></h2>
+    <p class="pengantar">
+      Setelah serangkaian nabi Bani Israil — dari Musa, Daud, Sulaiman, hingga Isa a.s. — turun pula masa menunggu yang panjang. Terbentanglah periode yang disebut <b>zaman Jahiliah</b>, yang meliputi kurang lebih lima–enam abad sebelum kelahiran Nabi Muhammad ﷺ, terutama di Jazirah Arab. Bagaimana kondisi dunia pada masa itu, dan apa hubungannya dengan teladan ketiga nabi yang sudah kita baca?
+    </p>
+  </div>
+
+  <article class="era era-jahiliah muncul">
+    <div class="era-head">
+      <span class="kicker-terang">✧ Pra-Masehi Akhir → Sebelum Masehi &amp; Sesudahnya</span>
+      <h3>Apa Itu Zaman Jahiliah?</h3>
+      <p>Jahiliah berasal dari kata <i>jahala</i> (tidak tahu) — zaman kebodohan, ketika wahyu sudah lama tidak turun dan manusia menggantinya dengan adat yang menyimpang.</p>
+    </div>
+    <div class="era-body">
+      <p>Pada masa ini, penyembahan berhala yang awalnya dimulai sejak zaman Nabi Idris a.s. telah berkembang pesat. Di sekitar Ka'bah yang dibangun Nabi Ibrahim dan Nabi Ismail a.s. — rumah Allah yang menjadi lambang tauhid — berdiri ratusan berhala. Masyarakat Arab mengenal praktik yang sangat jauh dari ajaran para nabi: memakai status sosial, mengubur bayi perempuan hidup-hidup, balas dendam antar kabilah berabad-abad, meminum khamr, dan menindas yang lemah. Menariknya, di tengah kegelapan itu masih tersisa sekelompok manusia yang jujur dan membenci penyembahan berhala — mereka disebut <b>hanif</b>, pengikut sisa ajaran tauhid Nabi Ibrahim dan Ismail a.s. Inilah bukti bahwa air tauhid yang dipancarkan para nabi itu tidak pernah benar-benar kering.</p>
+      <p>Sementara itu, di luar Jazirah Arab, dunia tengah dikuasai dua imperium besar: Romawi (Bizantium) dan Persia. Agama-agama wahyu telah banyak mengalami penyimpangan dari ajaran aslinya, dan masyarakat menanti datangnya nabi terakhir yang telah dijanjikan dalam kitab-kitab sebelumnya. Tepat pada masa kelam inilah, pada tahun 570 Masehi, lahirlah <b>Nabi Muhammad ﷺ</b> di Makkah — kota yang dulunya lembah tandus tempat bayi Ismail dan ibunya ditinggalkan. Empat puluh tahun kemudian, wahyu pertama turun, dan zaman Jahiliah perlahan-lahan berakhir oleh cahaya Al-Qur'an.</p>
+      <div class="dua-kolom">
+        <div class="kolom-mini kolom-ungu">
+          <h5>🏛️ Sebelum Masehi</h5>
+          <p>Era para nabi besar: Ibrahim, Ismail, Musa, Daud, Sulaiman, hingga Isa a.s. Ka'bah tetap dijaga keberadaannya, namun tauhid Bani Israil perlahan terkikis oleh penyimpangan.</p>
+        </div>
+        <div class="kolom-mini kolom-pink">
+          <h5>🕰️ Sesudah Masehi (sebelum Hijrah)</h5>
+          <p>Lima–enam abad tanpa wahyu baru di Jazirah Arab: puncak Jahiliah. Berhala berdiri di sekitar Ka'bah, sementara segelintir hanif tetap mencari jalan Ibrahim yang lurus.</p>
+        </div>
+      </div>
+      <div class="kotak-perhatian">
+        <b>Catatan penting:</b> istilah "Jahiliah" dalam Al-Qur'an dan hadits tidak menyatakan bahwa <i>semua</i> manusia zamannya bodoh atau jahat — para ulama menjelaskan maksudnya adalah kebodohan tentang agama Allah. Bahkan pada masa itu masih ada orang-orang saleh seperti para hanif, dan nilai-nilai kesabaran serta kejujuran yang diajarkan para nabi tetap dipegang oleh orang-orang beriman di mana pun mereka berada.
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ================= ERA IMAM MAHDI ================= -->
+<section class="blok" id="imam-mahdi">
+  <div class="muncul">
+    <span class="kicker pink">✧ Akhir Zaman</span>
+    <h2 class="judul-blok">Menjelang Era Imam Mahdi: <span style="color:#a21caf;">Sabar yang Tak Pernah Usang</span></h2>
+    <p class="pengantar">
+      Pertanyaan yang sering muncul: <i>"Apakah para nabi seperti Idris, Ismail, dan Zulkifli masih ada pada zaman Imam Mahdi?"</i> Mari kita jawab dengan adil berdasarkan Al-Qur'an, hadits, dan pendapat para ulama — sekaligus melihat mengapa teladan mereka justru semakin terasa relevan menjelang akhir zaman.
+    </p>
+  </div>
+
+  <article class="era era-mahdi muncul">
+    <div class="era-head">
+      <span class="kicker-terang">✧ Akhir Zaman &amp; Hari Akhir</span>
+      <h3>Imam Mahdi, Nabi Isa a.s., dan Warisan Para Nabi yang Sabar</h3>
+      <p>Para nabi itu sendiri telah wafat ribuan tahun lalu — namun "jiwa" kesabaran mereka justru dijanjikan Allah akan hidup kembali di akhir zaman.</p>
+    </div>
+    <div class="era-body">
+      <p>Islam meyakini bahwa <b>Nabi Muhammad ﷺ adalah nabi terakhir</b> (khatamun-nabiyyin, QS. Al-Ahzab: 40); setelah beliau wafat, tidak ada nabi baru yang datang. Artinya, menurut pemahaman mayoritas ulama, para nabi sebelumnya seperti Idris, Ismail, dan Zulkifli telah wafat dan tidak hadir kembali di tengah umat manusia. Pada masa Imam Mahdi kelak, yang datang adalah bukan para nabi, melainkan <b>waktu para penegak kebenaran yang mewarisi ilmu, kesabaran, dan ke-salehan para nabi</b> — inilah makna hadits tentang ulama sebagai pewaris para nabi. Sebagian ulama juga menyebut adanya pendapat lisan para sahabat tentang beberapa makhluk saleh yang umurnya dipanjangkan oleh Allah (seperti kisah Khidr a.s. dalam QS. Al-Kahf), namun pendapat ini tidak menjadi kesepakatan — dan Allah Yang Maha Mengetahui kebenaran setiap perkara.</p>
+      <p>Yang pasti dan diyakini dari hadits-hadits sahih adalah urutan peristiwa akhir zaman: <b>Imam Mahdi</b> — pemimpin dari keturunan Nabi ﷺ — akan muncul di tengah kondisi dunia yang penuh kezaliman dan kegelapan, lalu Allah akan mempersatukan umat di bawah kepemimpinannya. Setelah itu, <b>Nabi Isa a.s. akan turun ke bumi</b> di Damaskus dan shalat di belakang Imam Mahdi, mematahkan salib, membunuh babi, dan menghapus jizyah — tanda kemenangan tauhid untuk kedua kalinya dalam sejarah. Masa itu digambarkan sebagai era ketika bumi dipenuhi keadilan setelah sebelumnya dipenuhi kezaliman.</p>
+      <div class="hadits muncul">
+        <div class="isi-hadits">"Jika tidak tersisa dari umur dunia melainkan sehari, niscaya Allah memanjangkannya hingga mengutus seorang lelaki dariku (dari ahli baytku) yang mengisi bumi dengan keadilan sebagaimana telah dipenuhi kezaliman dan keaniayaan."</div>
+        <div class="sumber">— HR. Abu Dawud no. 4282 &amp; Ahmad, dari Ibnu Mas'ud radhiyallahu 'anhu</div>
+      </div>
+      <p>Di sinilah hubungan ketiga nabi kita dengan era Mahdi menjadi begitu indah. Imam Mahdi akan muncul pada saat umat Islam mengalami ujian terberat: kezaliman merajalela, manusia saling menyakiti, dan kesabaran menjadi barang langka. Siapa yang cocok menjadi teladan pada masa seperti itu? Justru <b>para nabi yang kita baca ini</b>: sabar seperti Ismail ketika hidup diserahkan kepada takdir Allah, teguh seperti Idris ketika dakwah ditolak, dan pemaaf seperti Zulkifli ketika umat sedang kacau. Hadits juga mengabarkan bahwa pada akhir zaman akan muncul kelompok yang menyebut dirinya <i>thā'ifah manshūrah</i> — golongan yang ditolong Allah karena mereka <b>"shābirūn" (tetap sabar) atas apa yang menimpa mereka</b>. Semangat inilah yang menghubungkan umat akhir zaman dengan para nabi pra-Masehi: nabi telah wafat, namun kesabaran dan ke-salehan adalah warisan yang tidak pernah mati.</p>
+      <div class="dua-kolom">
+        <div class="kolom-mini kolom-ungu">
+          <h5>👤 Imam Mahdi</h5>
+          <p>Pemimpin akhir zaman dari keturunan Nabi ﷺ yang mengisi bumi dengan keadilan. Beliau bukan nabi, melainkan pemimpin umat yang mewarisi teladan para nabi.</p>
+        </div>
+        <div class="kolom-mini kolom-pink">
+          <h5>🕊️ Nabi Isa a.s. Turun</h5>
+          <p>Satu-satunya nabi yang akan kembali (turun) di akhir zaman, menegakkan kembali kebenaran dan menyelesaikan misinya sebelum hari kiamat.</p>
+        </div>
+      </div>
+      <div class="kotak-perhatian">
+        <b>Ringkasnya:</b> para nabi seperti Idris, Ismail, dan Zulkifli hidup pada era pra-Masehi dan telah wafat — mereka tidak hadir kembali pada zaman Imam Mahdi menurut keyakinan umum. Namun justru itulah keindahannya: Allah tidak mengirim kembali para nabi, melainkan menuntut umat terakhir ini untuk <b>menghidupkan kembali akhlak para nabi</b> — sabar, saleh, jujur, dan pemaaf — tepat pada saat dunia paling membutuhkannya.
+      </div>
+    </div>
+  </article>
+</section>
+</main>
+
+<footer>
+  <div class="bismillah">وَاصْبِرْ فَإِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ</div>
+  <h4>✦ Penutup ✦</h4>
+  <p>"Dan bersabarlah, karena Allah tidak akan menyia-nyiakan pahala orang-orang yang berbuat baik." (QS. Hud: 115)</p>
+  <div class="garis-emas"></div>
+  <p>Tiga nabi, tiga zaman berbeda, satu benang merah: <b style="color:#fde68a;">kesabaran dan ke-salehan</b>. Semoga kisah Nabi Idris, Nabi Ismail, dan Nabi Zulkifli a.s. menjadi penerang langkah kita — hingga kita termasuk pewaris teladan mereka yang Allah kumpulkan kelak bersama para nabi, orang-orang saleh, dan syuhada. Aamiin.</p>
+  <p class="kecil">✦ Kisah Para Nabi Penuh Kesabaran — aplikasi HTML interaktif · dibuat dengan cinta untuk pembelajaran · 2026 ✦</p>
+</footer>
+
+<button id="btnAtas" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+
+<script>
+/* ============================================================
+   JAVASCRIPT — Timeline interaktif, progress bar, animasi,
+   navigasi aktif, tombol ke atas. Tanpa dependensi (offline).
+   ============================================================ */
+(function () {
+  "use strict";
+
+  /* ---------- 1. DATA GARIS WAKTU ---------- */
+  var TITIK = [
+    {
+      ikon: "🕊️", warna: "#0d9488", nama: "Nabi Adam a.s.",
+      era: "Pra-Masehi", warnaEra: "#0d9488",
+      teks: "Manusia pertama dan nabi pertama. Dari keturunannya lahirlah rangkaian para nabi. Anaknya, Nabi Syits a.s., melanjutkan hidup di atas tauhid — dari garis Syits inilah nanti lahir Nabi Idris a.s."
+    },
+    {
+      ikon: "📖", warna: "#0d9488", nama: "Nabi Idris a.s.",
+      era: "Pra-Masehi", warnaEra: "#0d9488",
+      teks: "Nabi pertama yang dianugerahi kitab dan pelopor menulis dengan pena. Berdakwah dengan sabar di masa penyembahan berhala pertama muncul, hingga Allah mengangkatnya ke derajat yang tinggi. ★ Salah satu dari 3 nabi utama aplikasi ini."
+    },
+    {
+      ikon: "🚢", warna: "#14b8a6", nama: "Nabi Nuh a.s.",
+      era: "Pra-Masehi", warnaEra: "#0d9488",
+      teks: "Nabi paling sabar dalam berdakwah: 950 tahun mengajak kaumnya, diolok, dicela, bahkan sebagian keluarganya meninggalkannya. Beliau melanjutkan jejak dakwah Nabi Idris yang hidup sebelum beliau."
+    },
+    {
+      ikon: "🕋", warna: "#7c3aed", nama: "Nabi Ibrahim & Ismail",
+      era: "Pra-Masehi ±1900 SM", warnaEra: "#7c3aed",
+      teks: "Ibrahim a.s. membawa Ismail bayi ke lembah Makkah, menguji penyembelihan, lalu bersama-sama membangun Ka'bah. Dari Ismail lahir bangsa Arab hingga Nabi Muhammad ﷺ. ★ Nabi Ismail adalah nabi utama kedua aplikasi ini."
+    },
+    {
+      ikon: "🧬", warna: "#8b5cf6", nama: "Bani Israil",
+      era: "Pra-Masehi", warnaEra: "#7c3aed",
+      teks: "Keturunan Nabi Ya'qub a.s.: era Yusuf, kemudian para nabi dan pemimpin di antara mereka — termasuk Zulkifli a.s. yang memimpin umat yang kacau hingga tertib kembali. ★ Nabi Zulkifli adalah nabi utama ketiga aplikasi ini."
+    },
+    {
+      ikon: "🪨", warna: "#a855f7", nama: "Nabi Musa a.s.",
+      era: "Pra-Masehi ±1300 SM", warnaEra: "#7c3aed",
+      teks: "Menerima Taurat, menentang Fir'aun, dan menuntun Bani Israil keluar dari perbudakan Mesir. Bersamanya Harun, Yusa, dan Al-Yasa' — nabi yang riwayatnya terkait dengan kisah pengangkatan Nabi Zulkifli."
+    },
+    {
+      ikon: "👑", warna: "#d97706", nama: "Daud & Sulaiman",
+      era: "Pra-Masehi ±1000 SM", warnaEra: "#d97706",
+      teks: "Era kejayaan kerajaan Bani Israil. Daud a.s. menerima Zabur, Sulaiman a.s. memerintah makhluk halus dan angin. Setelah era keemasan ini, ketaatan umat perlahan terkikis lagi."
+    },
+    {
+      ikon: "🕊️", warna: "#f59e0b", nama: "Nabi Isa a.s.",
+      era: "± 1 Masehi", warnaEra: "#d97706",
+      teks: "Lahir dari Maryam tanpa ayah, menerima Injil, dan diangkat oleh Allah. Pada akhir zaman kelak, hanya Isa a.s. yang akan turun kembali ke bumi — setelah munculnya Imam Mahdi."
+    },
+    {
+      ikon: "🌑", warna: "#475569", nama: "Zaman Jahiliah",
+      era: "± 500-an M", warnaEra: "#475569",
+      teks: "Lima–enam abad tanpa wahyu di Jazirah Arab: ratusan berhala mengelilingi Ka'bah yang dibangun Ibrahim-Ismail, penguburan bayi perempuan, dan balas dendam antar kabilah. Namun segelintir hanif tetap memegang sisa tauhid Ibrahim. (Lihat bab Zaman Jahiliah di bawah.)"
+    },
+    {
+      ikon: "🌙", warna: "#059669", nama: "Nabi Muhammad ﷺ",
+      era: "570 – 632 M", warnaEra: "#059669",
+      teks: "Nabi terakhir (khatamun-nabiyyin) lahir di Makkah — kota yang dahulu tempat Ismail dan Hajar ditinggalkan. Wahyu Al-Qur'an mengakhiri zaman Jahiliah dan menyempurnakan misi seluruh nabi sebelumnya."
+    },
+    {
+      ikon: "🚩", warna: "#a21caf", nama: "Imam Mahdi",
+      era: "Akhir Zaman", warnaEra: "#a21caf",
+      teks: "Pemimpin dari keturunan Nabi ﷺ yang muncul saat bumi dipenuhi kezaliman dan mengisinya dengan keadilan. Beliau bukan nabi, melainkan pemimpin yang mewarisi teladan kesabaran para nabi — seperti Idris, Ismail, dan Zulkifli. (Lihat bab Era Imam Mahdi.)"
+    },
+    {
+      ikon: "🌅", warna: "#db2777", nama: "Isa a.s. Turun & Hari Akhir",
+      era: "Akhir Zaman", warnaEra: "#db2777",
+      teks: "Nabi Isa a.s. turun di Damaskus, shalat di belakang Imam Mahdi, dan menegakkan kembali tauhid. Setelah serangkaian tanda besar, datanglah Hari Kiamat — ketika kesabaran dan ke-salehan menjadi modal yang paling berharga."
+    }
+  ];
+
+  var jalur = document.getElementById("tlJalur");
+  var detail = document.getElementById("tlDetail");
+
+  /* Render titik-titik timeline */
+  TITIK.forEach(function (t, i) {
+    var btn = document.createElement("button");
+    btn.className = "tl-node" + (i === 0 ? " aktif" : "");
+    btn.setAttribute("role", "tab");
+    btn.setAttribute("aria-label", t.nama);
+    btn.innerHTML =
+      '<span class="tl-emas">' + t.era + "</span>" +
+      '<span class="tl-dot" style="background:' + t.warna + '">' + t.ikon + "</span>" +
+      '<span class="tl-nama">' + t.nama + "</span>";
+    btn.addEventListener("click", function () {
+      var semua = jalur.querySelectorAll(".tl-node");
+      for (var k = 0; k < semua.length; k++) semua[k].classList.remove("aktif");
+      btn.classList.add("aktif");
+      renderDetail(i);
+    });
+    jalur.appendChild(btn);
+  });
+
+  function renderDetail(i) {
+    var t = TITIK[i];
+    detail.style.opacity = 0;
+    setTimeout(function () {
+      detail.innerHTML =
+        '<h4><span class="tl-dot" style="background:' + t.warna + '; width:30px; height:30px; font-size:.85rem;">' + t.ikon +
+        "</span>" + t.nama +
+        '<span class="tl-era" style="background:' + t.warnaEra + '">' + t.era + "</span></h4>" +
+        "<p>" + t.teks + "</p>";
+      detail.style.opacity = 1;
+    }, 140);
+  }
+
+  renderDetail(0);
+
+  /* ---------- 2. PROGRESS BAR BACA ---------- */
+  var bar = document.getElementById("progressBar");
+  function updateProgress() {
+    var tinggiDok = document.documentElement.scrollHeight - window.innerHeight;
+    var persen = tinggiDok > 0 ? (window.scrollY / tinggiDok) * 100 : 0;
+    bar.style.width = persen + "%";
+  }
+
+  /* ---------- 3. ANIMASI MUNCUL SAAT DI-SCROLL ---------- */
+  var elemenMuncul = document.querySelectorAll(".muncul");
+  if ("IntersectionObserver" in window) {
+    var pengamat = new IntersectionObserver(function (entri) {
+      entri.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("tampak");
+          pengamat.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    elemenMuncul.forEach(function (el) { pengamat.observe(el); });
+  } else {
+    elemenMuncul.forEach(function (el) { el.classList.add("tampak"); });
+  }
+
+  /* ---------- 4. TOMBOL KE ATAS ---------- */
+  var btnAtas = document.getElementById("btnAtas");
+  window.addEventListener("scroll", function () {
+    updateProgress();
+    if (window.scrollY > 650) btnAtas.classList.add("tampak-btn");
+    else btnAtas.classList.remove("tampak-btn");
+    tandaiNav();
+  }, { passive: true });
+  btnAtas.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  /* ---------- 5. NAVIGASI PILL AKTIF ---------- */
+  var pilihanNav = document.querySelectorAll(".nav-pills a");
+  var bagian = [];
+  pilihanNav.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) bagian.push({ link: a, el: el });
+  });
+
+  function tandaiNav() {
+    var posisi = window.scrollY + 140;
+    var aktif = bagian[0];
+    bagian.forEach(function (b) {
+      if (b.el.offsetTop <= posisi) aktif = b;
+    });
+    pilihanNav.forEach(function (a) { a.classList.remove("aktif"); });
+    if (aktif) aktif.link.classList.add("aktif");
+  }
+
+  /* ---------- 6. KOMPENSASI TINGGI NAVBAR SAAT ANCHOR ---------- */
+  pilihanNav.forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      var id = a.getAttribute("href").slice(1);
+      var target = document.getElementById(id);
+      if (target) {
+        ev.preventDefault();
+        var y = target.getBoundingClientRect().top + window.scrollY - 74;
+        window.scrollTo({ top: y, behavior: "smooth" });
+        history.replaceState(null, "", "#" + id);
+      }
+    });
+  });
+
+  updateProgress();
+  tandaiNav();
+})();
+</script>
+</body>
+</html>
